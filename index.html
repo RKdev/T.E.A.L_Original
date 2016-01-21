@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Index Page</title>
+		<!-- <script type="text/javascript" src="js/app.js"/> </script>-->
+		<script type="text/javascript" src="js/teal.js"/> </script>
+		<script type="text/javascript" src="js/jquery-2.1.4.min.js"/> </script>
+		<script type="text/javascript" src="js/pacman.js"/> </script>
+		</script>
+
+		<style type="text/css">
+			canvas { border: 1px solid black;}
+			#scaryButton { float: right;}
+		</style>
+  </head>
+
+	<body onload="drawPacMan();">
+		<!-- I think it's cool to draw PacMan -->
+  	<p>Hello, World!</p>
+		<canvas id="canvas" width="150" height="150"></canvas>
+		<hr/>
+		<button type="button" onclick="TEAL.loadArrayfromAJAX(TEAL.db, TEAL.resourcesArray, TEAL.populateArray)">Load Resource Array</button>
+	  <button type="button" onclick="TEAL.addToArray(TEAL.resourcesArray, 'category')">Add to Resource Array</button>
+		<button type="button" onclick="console.log('Index.HTML: ' + TEAL.resourcesArray);">Ouput Resource Array</button>
+		<button type="button" id="scaryButton" onclick="TEAL.emptyArray(TEAL.resourcesArray)">Empty Resource Array</button>
+    <br/>
+    <br/>
+		<button type="button" onclick="TEAL.writeArraytoAJAX(TEAL.db, TEAL.resourcesArray)">Write Resource Array</button>
+	</body>
+</html>
