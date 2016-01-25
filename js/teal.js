@@ -1,7 +1,7 @@
 console.log('T.E.A.L Running...');
 var TEAL = TEAL || {};
 
-var bob
+var bob;
 
 
 //Some setup vars
