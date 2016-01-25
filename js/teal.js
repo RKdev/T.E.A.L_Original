@@ -1,6 +1,9 @@
 console.log('T.E.A.L Running...');
 var TEAL = TEAL || {};
 
+var bob
+
+
 //Some setup vars
 TEAL.resourcesArray = [];
 TEAL.testArray = [];

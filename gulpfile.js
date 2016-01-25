@@ -4,12 +4,16 @@ var gulp = require('gulp');
 // include plug-ins
 var jshint = require('gulp-jshint');
 
-//gulp.task('default', function () {console.log('Hello, Gulp!\n')});
-
+gulp.task('default', ['jshint']);
 
 // JS hint task
 gulp.task('jshint', function() {
   gulp.src('./js/*.js')
     .pipe(jshint())
     .pipe(jshint.reporter('default'));
+});
+
+// watch for JS changes
+gulp.watch('./js/*.js', function() {
+  gulp.run('jshint');
 });
