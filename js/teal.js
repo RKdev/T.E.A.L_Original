@@ -4,7 +4,7 @@ var TEAL = TEAL || {};
 //Some setup vars
 TEAL.resourcesArray = [];
 TEAL.testArray = [];
-TEAL.db = "/pretendDB/data.json"
+TEAL.db = "/pretendDB/data.json";
 
 
 //function declarations
@@ -15,39 +15,40 @@ TEAL.populateArray = function(data, target){
           console.log("TEAL.populateArray: data loaded");
         }
     }
-}
+};
 
 TEAL.emptyArray = function emptyArray(target){
   target.length = 0;
   if (target.length === 0) {
     console.log("TEAL.emptyArray: array emptied");
   }
-}
+};
 
 TEAL.loadArrayfromAJAX = function(absPath, arrayTarget, callback){
   var xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function() {
     console.log('TEAL.loadArrayfromAJAX: ' + xhr.readyState);
-  }
+  };
+
   xhr.open("GET", absPath, true);
   xhr.addEventListener("load", function(){
     var appendArrayItems=JSON.parse(this.responseText);
     callback(appendArrayItems, arrayTarget);
   });
   xhr.send();
-}
+};
 
 TEAL.writeArraytoAJAX = function(absPath, arraySource){
   var xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function() {
     console.log('TEAL.writeArraytoAJAX: ' + xhr.readyState);
-  }
+  };
   xhr.open("POST", absPath, true);
 //  xhr.addEventListener("load", function(){
 //    callback(arraySource);
 //  });
   xhr.send(JSON.stringify(arraySource));
-}
+};
 
 TEAL.addToArray = function(target, category){
   var newResource = {};
@@ -55,7 +56,7 @@ TEAL.addToArray = function(target, category){
   if (target.push(newResource)) {
     console.log("TEAL.addToArray: data added");
   }
-}
+};
 
 function listTopics(resourceID){
   var intArrayLength = resources[resourceID].topics.length;
@@ -79,7 +80,7 @@ function readArray(anyArray) {
 
 function supports_local_storage() {
   try {
-    return 'localStorage' in window && window['localStorage'] !== null;
+    return 'localStorage' in window && window.localStorage !== null;
   } catch(e){
     return false;
   }

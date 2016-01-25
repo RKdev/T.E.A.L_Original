@@ -8,5 +8,10 @@
     "start": "node server.js"
   },
   "author": "Brad Traversy from Learn Nodejs by Building 10 Projects at Udemy.com",
-  "license": "GPL"
+  "license": "GPL",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-jshint": "^2.0.0",
+    "jshint": "^2.9.1"
+  }
 }
