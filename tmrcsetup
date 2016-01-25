@@ -1,9 +1,8 @@
-#!/bin/bash
 
 #/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin/
 
-PATH=$PATH:/usr/local/bin;export PATH
-echo $PATH
-npm install gulp --save-dev
-npm install gulp-jshint --save-dev
+set PATH = $PATH:/usr/local/bin
+#echo $PATH
+#npm install gulp --save-dev
+#npm install gulp-jshint --save-dev
 

@@ -4,7 +4,7 @@ var gulp = require('gulp');
 // include plug-ins
 var jshint = require('gulp-jshint');
 
-gulp.task('default', function () {console.log('Hello, Gulp!\n')});
+//gulp.task('default', function () {console.log('Hello, Gulp!\n')});
 
 
 // JS hint task
